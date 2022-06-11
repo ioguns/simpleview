@@ -1,6 +1,6 @@
 # SimpleView - View for PHP
 
-The simpleview library provides developers a simple library to complement to render php files.
+The simpleview library provides developers a simple library to render php files.
 
 ## Install
 
