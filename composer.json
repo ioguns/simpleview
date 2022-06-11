@@ -1,0 +1,48 @@
+{
+    "name": "ioguns/simple-view",
+    "keywords": ["view","template"],
+    "type": "library",
+    "license": "MIT",
+    "description": "SimpleView is library for rendering PHP files. It support multilevel child and parent template common with MVC frameworks",
+    "authors": [
+        {
+            "name": "Ishola Ogunseye",
+            "email": "ishola@oguns.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "php": ">=8.0",
+        "phpunit/phpunit": "^9"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "/tests/",
+            "/examples/"
+        ],
+        "psr-4": {
+            "IOguns\\SimpleView\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IOguns\\SimpleView\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@composer-update",
+            "vendor/bin/phpunit"
+        ],
+        "clean": [
+            "rm -rf vendor",
+            "rm -f composer.lock",
+            "rm -f .phpunit* "
+        ],
+        "composer-update": "composer update"
+    }
+}
